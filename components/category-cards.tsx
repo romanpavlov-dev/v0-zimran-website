@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Rocket, CreditCard, Settings, HelpCircle, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { MiniMascot } from "@/components/finelo-mascot";
 
 const categories = [
   {
@@ -11,9 +10,8 @@ const categories = [
     description: "New to Finelo? Learn the basics and start your journey.",
     icon: Rocket,
     articles: 12,
-    color: "#C4856B",
-    bgColor: "#FBF0EA",
-    mascotVariant: "getStarted" as const,
+    color: "#1E6FFF",
+    bgColor: "#EBF3FF",
     href: "/category/get-started",
   },
   {
@@ -23,7 +21,6 @@ const categories = [
     articles: 8,
     color: "#E74C3C",
     bgColor: "#FFEBE9",
-    mascotVariant: "billing" as const,
     href: "/category/billing",
   },
   {
@@ -33,7 +30,6 @@ const categories = [
     articles: 15,
     color: "#58CC02",
     bgColor: "#ECFFE8",
-    mascotVariant: "account" as const,
     href: "/category/account",
   },
   {
@@ -43,7 +39,6 @@ const categories = [
     articles: 20,
     color: "#5B7FD6",
     bgColor: "#EBF0FF",
-    mascotVariant: "troubleshoot" as const,
     href: "/category/troubleshooting",
   },
 ];
@@ -89,11 +84,6 @@ export function CategoryCards() {
                         <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-[#1E6FFF] group-hover:translate-x-1 transition-all" />
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Mini mascot in corner */}
-                  <div className="absolute -bottom-2 -right-2 opacity-20 group-hover:opacity-40 transition-opacity">
-                    <MiniMascot variant={category.mascotVariant} className="w-20 h-20" />
                   </div>
                 </Card>
               </Link>

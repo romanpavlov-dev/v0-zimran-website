@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CharacterGroup } from "@/components/finelo-mascot";
+import { FineloMascot } from "@/components/finelo-mascot";
 import { BookOpen, MessageCircle } from "lucide-react";
 
 export function StillStuckCTA() {
   return (
     <section className="py-16 bg-gradient-to-br from-[#E8F1FF] to-[#F4F6FA]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-3xl mx-auto text-center md:text-left">
-          {/* All characters together - bull in center, candlesticks on sides */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto text-center md:text-left">
+          {/* Bear mascot at computer */}
           <div className="shrink-0">
-            <CharacterGroup className="scale-110" />
+            <FineloMascot type="bear" size="lg" />
           </div>
           
           <div className="flex-1">
