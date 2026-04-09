@@ -4,7 +4,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type MascotSize = "sm" | "md" | "lg" | "xl";
-type MascotType = "bear" | "bulls" | "greenCandle";
+type MascotType = "bear" | "bulls" | "greenCandle" | "bullTrio";
 
 interface FineloMascotProps {
   type: MascotType;
@@ -31,18 +31,26 @@ const sizeMap: Record<MascotType, Record<MascotSize, { width: number; height: nu
     lg: { width: 200, height: 200 },
     xl: { width: 300, height: 300 },
   },
+  bullTrio: {
+    sm: { width: 100, height: 60 },
+    md: { width: 160, height: 96 },
+    lg: { width: 240, height: 144 },
+    xl: { width: 320, height: 192 },
+  },
 };
 
 const srcMap: Record<MascotType, string> = {
   bear: "/images/mascots/bear.png",
   bulls: "/images/mascots/bulls.png",
   greenCandle: "/images/mascots/green-candle.png",
+  bullTrio: "/images/mascots/bull-trio.png",
 };
 
 const altMap: Record<MascotType, string> = {
   bear: "Finelo Bear mascot at computer",
   bulls: "Finelo Bull and Candlestick mascots",
   greenCandle: "Finelo Green Candlestick mascot with buy/sell buttons",
+  bullTrio: "Finelo Bull and Candlestick trio mascots",
 };
 
 export function FineloMascot({ type, size = "md", className = "" }: FineloMascotProps) {
