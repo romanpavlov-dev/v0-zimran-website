@@ -9,7 +9,7 @@ export function SupportFooter() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
             <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bull-M2voVui1nNz3HvBcrfrqfpC9fzrTnE.png" 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bull-f9j3h7agjRwpv4zyku4unLWT0zKmJN.png" 
               alt="Finelo mascots" 
               className="w-16 h-auto"
             />
