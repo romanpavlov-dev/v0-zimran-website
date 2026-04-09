@@ -14,9 +14,9 @@ export function StillStuckCTA({ onAskFinn }: StillStuckCTAProps) {
     <section className="py-16 bg-gradient-to-br from-[#E8F1FF] to-[#F4F6FA]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto text-center md:text-left">
-          {/* Bear mascot at computer */}
+          {/* Bull trio mascot */}
           <div className="shrink-0">
-            <FineloMascot type="bear" size="lg" />
+            <FineloMascot type="bullTrio" size="xl" />
           </div>
           
           <div className="flex-1">

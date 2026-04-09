@@ -14,24 +14,33 @@ interface Message {
 
 export function FinnChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: 1,
-      text: "Hi! I'm Finn. How can I help you today?",
-      sender: "finn",
-      timestamp: new Date(),
-    },
-  ]);
+  const [mounted, setMounted] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Initialize messages on client only to avoid hydration mismatch with timestamps
+  useEffect(() => {
+    setMounted(true);
+    setMessages([
+      {
+        id: 1,
+        text: "Hi! I'm Finn. How can I help you today?",
+        sender: "finn",
+        timestamp: new Date(),
+      },
+    ]);
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (mounted) {
+      scrollToBottom();
+    }
+  }, [messages, mounted]);
 
   const handleSend = () => {
     if (!inputValue.trim()) return;
@@ -113,14 +122,16 @@ export function FinnChatWidget() {
                   )}
                 >
                   <p className="text-sm leading-relaxed">{message.text}</p>
-                  <p
-                    className={cn(
-                      "text-xs mt-1",
-                      message.sender === "user" ? "text-white/70" : "text-muted-foreground"
-                    )}
-                  >
-                    {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                  </p>
+                  {mounted && (
+                    <p
+                      className={cn(
+                        "text-xs mt-1",
+                        message.sender === "user" ? "text-white/70" : "text-muted-foreground"
+                      )}
+                    >
+                      {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
