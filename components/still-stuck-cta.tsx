@@ -3,9 +3,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FineloMascot } from "@/components/finelo-mascot";
-import { BookOpen, MessageCircle } from "lucide-react";
+import { BookOpen, Bot } from "lucide-react";
 
-export function StillStuckCTA() {
+interface StillStuckCTAProps {
+  onAskFinn?: () => void;
+}
+
+export function StillStuckCTA({ onAskFinn }: StillStuckCTAProps) {
   return (
     <section className="py-16 bg-gradient-to-br from-[#E8F1FF] to-[#F4F6FA]">
       <div className="container mx-auto px-4">
@@ -20,7 +24,7 @@ export function StillStuckCTA() {
               Still stuck?
             </h2>
             <p className="text-muted-foreground mb-6 text-lg">
-              {"Don't worry, we're here to help! Browse our articles for more answers or submit a ticket and our friendly team will get back to you soon."}
+              {"Don't worry, we're here to help! Browse our articles for more answers or chat with Finn, our friendly AI assistant."}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
@@ -35,13 +39,11 @@ export function StillStuckCTA() {
                 </Link>
               </Button>
               <Button 
-                asChild
+                onClick={onAskFinn}
                 className="rounded-full px-6 py-6 text-base font-semibold bg-[#1E6FFF] hover:bg-[#1E6FFF]/90 text-white"
               >
-                <Link href="/submit-ticket">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Submit a Ticket
-                </Link>
+                <Bot className="mr-2 h-5 w-5" />
+                Ask Finn
               </Button>
             </div>
           </div>

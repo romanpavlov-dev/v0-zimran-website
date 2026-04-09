@@ -4,7 +4,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type MascotSize = "sm" | "md" | "lg" | "xl";
-type MascotType = "bear" | "bulls";
+type MascotType = "bear" | "bulls" | "greenCandle";
 
 interface FineloMascotProps {
   type: MascotType;
@@ -25,12 +25,30 @@ const sizeMap: Record<MascotType, Record<MascotSize, { width: number; height: nu
     lg: { width: 200, height: 120 },
     xl: { width: 280, height: 168 },
   },
+  greenCandle: {
+    sm: { width: 80, height: 80 },
+    md: { width: 140, height: 140 },
+    lg: { width: 200, height: 200 },
+    xl: { width: 300, height: 300 },
+  },
+};
+
+const srcMap: Record<MascotType, string> = {
+  bear: "/images/mascots/bear.png",
+  bulls: "/images/mascots/bulls.png",
+  greenCandle: "/images/mascots/green-candle.png",
+};
+
+const altMap: Record<MascotType, string> = {
+  bear: "Finelo Bear mascot at computer",
+  bulls: "Finelo Bull and Candlestick mascots",
+  greenCandle: "Finelo Green Candlestick mascot with buy/sell buttons",
 };
 
 export function FineloMascot({ type, size = "md", className = "" }: FineloMascotProps) {
   const dimensions = sizeMap[type][size];
-  const src = type === "bear" ? "/images/mascots/bear.png" : "/images/mascots/bulls.png";
-  const alt = type === "bear" ? "Finelo Bear mascot at computer" : "Finelo Bull and Candlestick mascots";
+  const src = srcMap[type];
+  const alt = altMap[type];
 
   return (
     <div 

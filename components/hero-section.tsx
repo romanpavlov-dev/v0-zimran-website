@@ -52,9 +52,9 @@ export function HeroSection() {
             </div>
           </div>
           
-          {/* Bulls mascot - the three characters together */}
+          {/* Green Candlestick mascot with buy/sell buttons */}
           <div className="hidden md:block">
-            <FineloMascot type="bulls" size="xl" className="animate-bounce-slow" />
+            <FineloMascot type="greenCandle" size="xl" className="animate-bounce-slow" />
           </div>
         </div>
       </div>
