@@ -54,7 +54,7 @@ export function HeroSection() {
           
           {/* Mascot */}
           <div className="hidden md:block flex-shrink-0">
-            <FineloMascot mood="waving" size="xl" className="animate-bounce-slow" />
+            <FineloMascot character="green" mood="waving" size="xl" className="animate-bounce-slow" />
           </div>
         </div>
       </div>

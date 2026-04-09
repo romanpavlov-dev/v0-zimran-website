@@ -11,7 +11,7 @@ export function StillStuckCTA() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-3xl mx-auto text-center md:text-left">
           <div className="shrink-0">
-            <FineloMascot mood="thinking" size="lg" />
+            <FineloMascot character="bear" mood="thinking" size="lg" />
           </div>
           
           <div className="flex-1">
