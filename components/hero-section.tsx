@@ -54,7 +54,7 @@ export function HeroSection() {
           {/* Finelo mascots */}
           <div className="hidden md:block">
             <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bull-R1UBOGZ4GU7YtAeONsbeH4ZQ5MpY8H.png" 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a84c1493-a8e1-4efb-965f-ad2914a22455_removalai_preview-ZXU2AFS7LPhy4u9RwfWVC4HWfZ3URC.png" 
               alt="Finelo mascots" 
               className="w-64 h-auto animate-bounce-slow"
             />
