@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
-import { FineloMascot } from "@/components/finelo-mascot";
 
 export function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -52,9 +51,13 @@ export function HeroSection() {
             </div>
           </div>
           
-          {/* Green Candlestick mascot with buy/sell buttons */}
+          {/* Finelo mascots */}
           <div className="hidden md:block">
-            <FineloMascot type="greenCandle" size="xl" className="animate-bounce-slow" />
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_5386710539578315161_m-hIJ5iYhQsJ8S5iJAsfUxQp270t94A5.jpg" 
+              alt="Finelo mascots" 
+              className="w-64 h-auto animate-bounce-slow"
+            />
           </div>
         </div>
       </div>

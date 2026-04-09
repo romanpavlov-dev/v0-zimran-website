@@ -16,7 +16,7 @@ export function StillStuckCTA({ onAskFinn }: StillStuckCTAProps) {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto text-center md:text-left">
           {/* Bear mascot at computer */}
           <div className="shrink-0">
-            <FineloMascot type="bear" size="xl" />
+            <FineloMascot type="bear" size="lg" />
           </div>
           
           <div className="flex-1">

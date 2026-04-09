@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { FineloMascot } from "@/components/finelo-mascot";
 
 export function SupportFooter() {
   return (
@@ -9,7 +8,11 @@ export function SupportFooter() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
-            <FineloMascot type="bullTrio" size="md" />
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_5386710539578315161_m-hIJ5iYhQsJ8S5iJAsfUxQp270t94A5.jpg" 
+              alt="Finelo mascots" 
+              className="w-16 h-auto"
+            />
             <div>
               <Link href="/" className="flex items-center gap-2">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#1E6FFF]">
